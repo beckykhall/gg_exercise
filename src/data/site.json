@@ -1,4 +1,7 @@
 {
+    "title" : "Gorilla",
+    "copyright": "Copyright &copy; 2017 Gorilla",
+    "address": "Gorilla | 111 West Jackson Blvd. Suite 300 | Chicago, IL 60604",
     "facets" : [
         {
         "category" : "Attribute Category",
