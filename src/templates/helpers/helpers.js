@@ -36,6 +36,23 @@ var helpers = {
             ret = inverse(this);
         }
         return ret;
+    },
+    getRatingWidth: function(rating, scale){
+        if(typeof rating === "number" && typeof scale === "number"){
+            return (rating/scale)*100 + '%';
+        }
+    },
+    formatPrice: function(price){
+        if(typeof price === "number"){
+            price = price.toFixed(2);
+            return '$'+price;
+        }
+    },
+    isNthItem: function(index, count){
+        if (typeof index === 'number' && typeof count === 'number'){
+            index++;
+            return index % count === 0;
+        }
     }
 };
 

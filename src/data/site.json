@@ -88,12 +88,15 @@
         "name": "Product Title 01",
         "id": "761",
         "sku": "14WPN7BW",
-        "price": 75,
+        "price": {
+                "regular": 75,
+                "special": null
+            },
         "subtotal": 75,
         "img": "http://placehold.it/500x500",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
         "qty": 100,
-        "ribbon": "New",
+        "ribbon": "new",
         "rating": 5,
         "colors": [{
             "name": "Purple",
@@ -127,7 +130,7 @@
             "img": "http://placehold.it/500x500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "Sale",
+            "ribbon": "sale",
             "rating": 4,
             "colors": [{
                 "name": "Purple",

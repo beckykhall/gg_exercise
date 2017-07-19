@@ -2,3 +2,38 @@
 title: Home
 layout: src/templates/layouts/2column-left.hbs
 ---
+<div class="row top-controls">
+	
+</div>
+<div class="row">
+	<div class="container-fluid product-grid">
+		{{#each site.catalog}}
+
+			<div class="product col-md-4 {{this.ribbon}}">
+				<div class="image-wrapper">
+					<img src="{{this.img}}" style="max-width:100%"/>
+				</div>
+				<h3 class="product-name">{{this.name}}</h3>
+				<div class="rating">
+					<span class="rating-value" style="width:{{getRatingWidth this.rating 5}}">{{this.rating}}</span>
+				</div>
+				<div class="price-block">
+					{{#if this.price.special}}
+					<span class="original-price">{{formatPrice this.price.regular}}</span>
+					<span class="special-price">{{formatPrice this.price.special}}</span>
+					{{else}}
+					<span class="price">{{formatPrice this.price.regular}}</span>
+					{{/if}}
+				</div>
+				<div class="swatches-block">
+					{{#each this.colors}}
+					<span style="background-color:{{this.code}}">{{this.name}}</span>
+					{{/each}}
+				</div>
+			</div>
+
+		{{else}}
+			<p class="empty">Unfortunately, no products exist for that query. Please try again.</p>
+		{{/each}}
+	</div>
+</div>
